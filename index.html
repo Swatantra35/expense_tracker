@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💰 Modern Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body>
+    <div class="container">
+      <h1>💰 Expense Tracker</h1>
+
+      <div class="form">
+        <div class="input-group">
+          <input type="text" id="title" placeholder="What did you spend on?" />
+        </div>
+
+        <div class="input-group">
+          <input
+            type="number"
+            id="amount"
+            placeholder="Amount (₹)"
+            step="0.01"
+            min="0"
+          />
+        </div>
+
+        <div class="input-group">
+          <select id="category">
+            <option value="Food">🍔 Food & Dining</option>
+            <option value="Travel">✈️ Travel & Transport</option>
+            <option value="Shopping">🛍️ Shopping</option>
+            <option value="Bills">💡 Bills & Utilities</option>
+            <option value="Entertainment">🎬 Entertainment</option>
+            <option value="Health">🏥 Health & Fitness</option>
+            <option value="Education">📚 Education</option>
+            <option value="Other">📦 Other</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <input type="date" id="date" />
+        </div>
+
+        <button id="addBtn">
+          <span>✨ Add Expense</span>
+        </button>
+      </div>
+
+      <div class="total-section">
+        <h3>Total Expenses</h3>
+        <div>₹<span id="total">0</span></div>
+      </div>
+
+      <ul id="expenseList"></ul>
+
+      <div class="chart-container">
+        <canvas id="expenseChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
